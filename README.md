@@ -131,11 +131,12 @@ Virtual table  vs calculated table
 
 ![image](https://github.com/user-attachments/assets/ffe3dc67-c4c6-499f-a4e1-b9cfaea5cbb8)
 
-
-## Visualizing displaying the result of virtual table
+Visualizing displaying the result of virtual table
 - You can create calculated table for visualizing the result of virtual table
 - Using DAX studio to create calculated table
 
+
+## case study 2.2
   ![image](https://github.com/user-attachments/assets/3928a593-3370-443c-8a52-4024515a4b8c)
 
   ![image](https://github.com/user-attachments/assets/34e862c4-52a9-48c3-9c39-e040dfc1d8cf)
