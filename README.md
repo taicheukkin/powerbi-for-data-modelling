@@ -1,7 +1,6 @@
 
 
-# powerbi project
-
+# chapter 1 
 ## powerbi layer
 
 1. the data preparation layer
