@@ -139,9 +139,62 @@ step2 measure for end users to switch the measure dynamically
 step 3 create area graph(pop variance) and slicer(period over period)
 ![image](https://github.com/user-attachments/assets/9b8a5164-c25c-4d7e-a1fd-aedc324410e6)
 
+syntax of Switch function
+![image](https://github.com/user-attachments/assets/dc4f87d2-0751-4bb3-96ef-82d3f2834047)
+
+- true(）can substitute the expression
+  
 if the end user select MoM variance from the slicer it call the Internet Sales Variance measure, it calls internet sales YoY Variance 
 
 
+##  data table/dimension with dax
 
-##
+notes
+- at least one coluumn with date and datetime data type
+- the column containing the date value must be at day graunlarity
+- date column start at from 1 st janauary of starting year and go up to 31 st december of ending year
+- data table must be continuous
 
+two dax function
+
+calendarauto()
+- finds the 1st january of first date and 31st decemeber automatically
+- no recommanded
+  -  generate huge data table because the function consider the unknown date(eg.1990)
+
+calendar()
+- no automatically the 1st january of first date and 31st decemeber 
+- need to adjust the date
+
+data table
+
+![image](https://github.com/user-attachments/assets/694f56c0-eaaf-44ea-bb2f-f4bf5c43faec)
+
+![image](https://github.com/user-attachments/assets/c471b573-4d88-4ab8-8e45-f9b5377f20fb)
+
+![image](https://github.com/user-attachments/assets/80f65bda-5669-473e-8a8e-7230b1875630)
+
+to ensure the time intelligent function work correctly, set mark as date table
+![image](https://github.com/user-attachments/assets/283cc36b-f98a-4b0d-90fb-c60bd52c78af)
+
+
+## create time dimension with dax
+
+we should consider date granularity of table (eg. at second level for transaction database)
+
+need to have time column in our fact table to create a relationship between time table and the fact table
+
+Time table 
+
+![image](https://github.com/user-attachments/assets/7c33f49b-b768-47d7-a6f8-459c21590bcb)
+
+- analyze in different time bands, specifically 5 min, 15 min ,45 min, 60 min
+- form a relationship between internet sale table and time table
+-floor function: Rounds a number down, toward zero, to the nearest multiple of significance.
+-selectcolumn function:
+  -Returns a table with selected columns from the table and new columns specified by the DAX expressions.
+  -SELECTCOLUMNS has the same signature as ADDCOLUMNS
+  
+data visualiztion in different time band
+
+![image](https://github.com/user-attachments/assets/ba16775b-c82e-437b-b628-7b8da2109a54)
