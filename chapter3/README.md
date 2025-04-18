@@ -213,14 +213,23 @@ Case study 3.2 Recursive function
 - eg. 10!=1*2*3*4*5*6*7*8*9*10
 
 - let
-    factorial=(validnumber as number) as number
+
+   factorial=(validnumber as number) as number
+
     if ValidNumber <0
+
     then error "Negative numbers are not allowed to calculate factorial. Please  select a positive number."
+
     else
+
         if validNumber=0
+
         then 1
+
         else ValidNumber *@ Factorial(validnumber -1)     
+
      in
+
        Factorial
 
   ![image](https://github.com/user-attachments/assets/27e90491-d54b-4048-b403-566992a0e8fa)
